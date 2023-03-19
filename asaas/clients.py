@@ -1,4 +1,4 @@
-from python_asaas import AsaasAPI
+from asaas import AsaasAPI
 
 
 class Clients(AsaasAPI):
