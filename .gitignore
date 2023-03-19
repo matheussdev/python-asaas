@@ -1,0 +1,43 @@
+# Temporary files and directories
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.cache
+*.log
+*.tmp
+*.swp
+*.swo
+*.swn
+
+# Virtual environments
+venv/
+.virtualenv/
+.env/
+env/
+pyenv.cfg
+
+# Cache folders and dependency folders
+__pypackages__/
+*.egg-info/
+*.egg
+*.wheel
+dist/
+build/
+*.so
+
+# IDEs and text editor specific folders
+.vscode/
+.idea/
+*.iml
+*.sln
+*.suo
+*.proj
+*.user
+*.sublime-project
+*.sublime-workspace
+
+# Operating system-specific files
+.DS_Store
+Thumbs.db
+Desktop.ini

@@ -20,9 +20,13 @@ class CustomHTTPAdapter(HTTPAdapter):
     def _make_url(self, path):
         return f"{self.base_url}{path}"
 
-    def get(self, path, **kwargs):
+    def get(self, path, params=None, **kwargs):
         url = self._make_url(path)
-        return self.session.get(url, **kwargs)
+        return self.session.get(url, params=params, **kwargs)
+
+    def post(self, path, data=None, json=None, **kwargs):
+        url = self._make_url(path)
+        return self.session.post(url, data=data, json=json, **kwargs)
 
     def update(self, path, data=None, json=None, **kwargs):
         url = self._make_url(path)
@@ -31,7 +35,3 @@ class CustomHTTPAdapter(HTTPAdapter):
     def delete(self, path, **kwargs):
         url = self._make_url(path)
         return self.session.delete(url, **kwargs)
-
-    def post(self, path, data=None, json=None, **kwargs):
-        url = self._make_url(path)
-        return self.session.post(url, data=data, json=json, **kwargs)
